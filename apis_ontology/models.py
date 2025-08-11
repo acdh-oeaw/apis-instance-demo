@@ -19,23 +19,31 @@ class Profession(GenericModel, models.Model):
     def __str__(self):  # noqa: D105
         return self.name
 
+    class Meta:
+        ordering = ["name"]
+
 
 class Person(VersionMixin, E21_Person, AbstractEntity):
     """A model representing a person with associated professions."""
 
     profession = models.ManyToManyField(Profession, blank=True)
 
+    class Meta:
+        ordering = ["surname"]
+
 
 class Place(VersionMixin, E53_Place, AbstractEntity):
     """A model representing a place or location."""
 
-    pass
+    class Meta:
+        ordering = ["label"]
 
 
 class Group(VersionMixin, E74_Group, AbstractEntity):
     """A model representing a group or organization or institution."""
 
-    pass
+    class Meta:
+        ordering = ["label"]
 
 
 class IsRelatedTo(Relation):
@@ -48,6 +56,9 @@ class IsRelatedTo(Relation):
     def reverse_name(self) -> str:  # noqa: D102
         return "is related to"
 
+    class Meta:
+        ordering = ["pk"]
+
 
 class IsAMemberOf(Relation):
     """A relation indicating that a person is a member of a group."""
@@ -58,6 +69,9 @@ class IsAMemberOf(Relation):
     @classmethod
     def reverse_name(self) -> str:  # noqa: D102
         return "has as a member"
+
+    class Meta:
+        ordering = ["pk"]
 
 
 class WorksFor(Relation):
@@ -70,6 +84,9 @@ class WorksFor(Relation):
     def reverse_name(self) -> str:  # noqa: D102
         return "employs"
 
+    class Meta:
+        ordering = ["pk"]
+
 
 class LivesIn(Relation):
     """A relation indicating that a person lives in a place."""
@@ -80,3 +97,6 @@ class LivesIn(Relation):
     @classmethod
     def reverse_name(self) -> str:  # noqa: D102
         return "is the place of residence of"
+
+    class Meta:
+        ordering = ["pk"]
