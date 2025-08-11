@@ -12,6 +12,7 @@ dependencies = [
     "apis-acdhch-default-settings==2.10.0",
     "psycopg>=3.2.9",
     "psycopg2>=2.9.10",
+    "faker>=37.5.3",
 ]
 
 [tool.hatch.build.targets.wheel]
