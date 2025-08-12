@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+{% if object %}
+{{ object }}
+{% else %}
+Demo APIS Instance
+{% endif %}
+{% endblock title %}
+{% block main-menu %}
+    <li class="nav-item mt-auto mb-auto">
+        <a class="navbar-brand d-flex align-items-center  m-0 text-primary" href="/" alt="Home">
+        <span class="material-symbols-outlined">
+            home
+        </span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true"
+        aria-expanded="false">
+        {% translate "About" %} <span class="caret" />
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{% url 'apis:documentation' %}">{% translate "Data model" %}</a>
+    </div>
+    </li>
+    {{ block.super }}
+{% endblock main-menu %}
+
+{% block content %}
+    <div class="container my-5">
+        <div class="p-5 bg-light rounded-3 shadow">
+            <div class="container-fluid py-5">
+                <h1 class="display-4 fw-bold text-primary">APIS Demo Instance</h1>
+                <p class="lead">A demo instance with fictional data to showcase APIS features</p>
+            </div>
+            <div class="container-fluid">
+                <p>
+                    This demo instance of <a
+                        href="https://www.oeaw.ac.at/acdh/research/dh-research-infrastructure/resources/software-services/apis"
+                        target="_blank">APIS</a> (Austrian
+                    Prosopographical/Biographical Information System makes use of a <a href="/apis/documentation">fictional data model</a> and sample data to demonstrate its features.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
