@@ -13,6 +13,7 @@ dependencies = [
     "psycopg>=3.2.9",
     "psycopg2>=2.9.10",
     "faker>=37.5.3",
+    "django-cosmograph>=0.3.3",
 ]
 
 [tool.hatch.build.targets.wheel]
