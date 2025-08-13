@@ -27,6 +27,8 @@ Demo APIS Instance
     </div>
     </li>
     {{ block.super }}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'graph_view' %}">{% translate "Graph" %}</a>
 {% endblock main-menu %}
 
 {% block content %}

@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from apis_core.apis_entities.api_views import GetEntityGeneric
-
+from .views import GraphView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -13,8 +13,11 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("entity/<int:pk>/", GetEntityGeneric.as_view(), name="GetEntityGenericRoot"),
     path("", TemplateView.as_view(template_name="base.html")),
+    path(
+        "graph/",
+        GraphView.as_view(),
+        name="graph_view",
+    ),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
-
-
