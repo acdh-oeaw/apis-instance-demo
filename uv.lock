@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">3.11"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -105,7 +105,7 @@ dependencies = [
 requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.10.0" },
     { name = "apis-core-rdf", specifier = "==0.49.1" },
-    { name = "django-cosmograph", specifier = ">=0.3.3" },
+    { name = "django-cosmograph", specifier = "==0.3.8" },
     { name = "faker", specifier = ">=37.5.3" },
     { name = "psycopg", specifier = ">=3.2.9" },
     { name = "psycopg2", specifier = ">=2.9.10" },
@@ -366,16 +366,16 @@ sdist = { url = "https://files.pythonhosted.org/packages/ec/32/004073fb1bc55770b
 
 [[package]]
 name = "django-cosmograph"
-version = "0.3.3"
+version = "0.3.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "matplotlib" },
     { name = "seaborn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/53/be/59cc433065c33d510e05a930f85d3f09dd8f46722a34bb0732dc090dfb40/django_cosmograph-0.3.3.tar.gz", hash = "sha256:6d8b18b741beb05396ae50d56e9395dba63ab38f18d20a5a39cdcc55fddb9e41", size = 430940, upload-time = "2025-07-16T17:03:34.717Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/de/76d40dae7bb9f7ac439fed9e1de0fe94f23ab018cff4b4a4b94d64c99362/django_cosmograph-0.3.8.tar.gz", hash = "sha256:15cb3a1dabb2581c0839b95e4facfecb84039abd491e835bc1486abc0b99c697", size = 432871, upload-time = "2025-08-13T11:27:02.628Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5e/4e/7f883859d4df8a449f7f1afd2bd7a56ee8643c658ff8a725e4cac47515c5/django_cosmograph-0.3.3-py3-none-any.whl", hash = "sha256:62bcc29e1bcacdc5e58683057a798d2bff0cb9147809738e961fb4ce8672632f", size = 363072, upload-time = "2025-07-16T17:03:33.466Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/f8/3d122f7d70c53f4f950ad512350e68c0b8da8ea57fee5fb8dd841f7c0d6c/django_cosmograph-0.3.8-py3-none-any.whl", hash = "sha256:3439d3319a4e7d6b24a39122b7a41b9b9a0fbba01aa24d458ab31c4107453e4e", size = 362740, upload-time = "2025-08-13T11:27:01.101Z" },
 ]
 
 [[package]]
