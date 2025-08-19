@@ -18,6 +18,7 @@ urlpatterns = [
         GraphView.as_view(),
         name="graph_view",
     ),
+    path("", include("apis_acdhch_django_auditlog.urls")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
