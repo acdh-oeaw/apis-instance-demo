@@ -11,6 +11,10 @@ ADDITIONAL_APPS = [
     "django.contrib.staticfiles",
     "django_cosmograph",
 ]
+CSP_DEFAULT_SRC = CSP_DEFAULT_SRC + (
+    "'unsafe-eval'",  # needed for cosmograph 1.4.2
+    "xovkkfhojasbjinfslpx.supabase.co",  # cosmograph telemetry
+)
 
 for app in ADDITIONAL_APPS:
     if app not in INSTALLED_APPS:
