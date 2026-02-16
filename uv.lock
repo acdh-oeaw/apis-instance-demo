@@ -71,6 +71,23 @@ wheels = [
 ]
 
 [[package]]
+name = "apis-bibsonomy"
+version = "0.13.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "django-autocomplete-light" },
+    { name = "django-crispy-forms" },
+    { name = "djangorestframework" },
+    { name = "jmespath" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ab/cd/994779eb83767894c2779d66fc69b40de0c0acc90141875c515aa563a1de/apis_bibsonomy-0.13.2.tar.gz", hash = "sha256:79b30f60dd9962ac172a76a4ff37e6f81e615d8f7363dc0aa5452b6c8b8a372d", size = 36990, upload-time = "2025-05-14T12:03:57.259Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/21/c3/4e35e9a9d093c57603a8a7db6769b24277a7552e07542db04bc13dec59a2/apis_bibsonomy-0.13.2-py3-none-any.whl", hash = "sha256:c4c149b29149e7effd5c06b8835317c56ec07cf65a323fc706f0ce446c767699", size = 20623, upload-time = "2025-05-14T12:03:55.693Z" },
+]
+
+[[package]]
 name = "apis-core-rdf"
 version = "0.59.0"
 source = { registry = "https://pypi.org/simple" }
@@ -103,6 +120,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "apis-acdhch-default-settings" },
+    { name = "apis-bibsonomy" },
     { name = "apis-core-rdf" },
     { name = "django-cosmograph" },
     { name = "faker" },
@@ -112,6 +130,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.17.0" },
+    { name = "apis-bibsonomy", specifier = ">=0.13.2" },
     { name = "apis-core-rdf", specifier = "==0.59.0" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
@@ -602,6 +621,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/e1/7e/691d061b7329bc8d54edbf0ec22fbfb2afe61facb681f9aaa9bff7a27d04/inflection-0.5.1.tar.gz", hash = "sha256:1a29730d366e996aaacffb2f1f1cb9593dc38e2ddd30c91250c6dde09ea9b417", size = 15091, upload-time = "2020-08-22T08:16:29.139Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/59/91/aa6bde563e0085a02a435aa99b49ef75b0a4b062635e606dab23ce18d720/inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2", size = 9454, upload-time = "2020-08-22T08:16:27.816Z" },
+]
+
+[[package]]
+name = "jmespath"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d3/59/322338183ecda247fb5d1763a6cbe46eff7222eaeebafd9fa65d4bf5cb11/jmespath-1.1.0.tar.gz", hash = "sha256:472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d", size = 27377, upload-time = "2026-01-22T16:35:26.279Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/2f/967ba146e6d58cf6a652da73885f52fc68001525b4197effc174321d70b4/jmespath-1.1.0-py3-none-any.whl", hash = "sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64", size = 20419, upload-time = "2026-01-22T16:35:24.919Z" },
 ]
 
 [[package]]
