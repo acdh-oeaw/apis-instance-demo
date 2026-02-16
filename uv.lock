@@ -29,7 +29,7 @@ wheels = [
 
 [[package]]
 name = "apis-acdhch-default-settings"
-version = "2.16.0"
+version = "2.17.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "apis-acdhch-django-auditlog" },
@@ -41,6 +41,7 @@ dependencies = [
     { name = "django-auth-ldap" },
     { name = "django-csp" },
     { name = "django-removals" },
+    { name = "gunicorn" },
     { name = "opentelemetry-distro" },
     { name = "opentelemetry-exporter-otlp" },
     { name = "opentelemetry-instrumentation-asgi" },
@@ -51,9 +52,9 @@ dependencies = [
     { name = "requests" },
     { name = "whitenoise" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/86/70/e4f0e2d6889829d4b31b21138276fa93ac507004d121c18c6e944d383c4c/apis_acdhch_default_settings-2.16.0.tar.gz", hash = "sha256:f67a8fd5d755a74e42432973530bab40c2c2daa9f0af68d493194e9861a05a1d", size = 15571, upload-time = "2025-12-05T06:26:04.257Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/91/4ff3fdf8b08550db411ca504ef8d547a46f870d1ab3273673592ee0e8333/apis_acdhch_default_settings-2.17.0.tar.gz", hash = "sha256:9f9ffd9370343b789f3c36d3344f9028c5d482c207728991a2b99f759ad26626", size = 15903, upload-time = "2026-02-04T12:21:30.409Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/6e/9920f75104a27aa48650fdd4cdc9133b0b8caf5aee383b4c3699eb5626cc/apis_acdhch_default_settings-2.16.0-py3-none-any.whl", hash = "sha256:80ab579c32f966b0d669fc82fc7df6e4415058525e92cee1a2f50ae38d1bae0b", size = 11640, upload-time = "2025-12-05T06:26:02.926Z" },
+    { url = "https://files.pythonhosted.org/packages/d7/ff/94895e6caca8b684ced6a36468104de463026ae029206dfd53e57fd29c85/apis_acdhch_default_settings-2.17.0-py3-none-any.whl", hash = "sha256:5740817ed807311f753786d07c0af46dd82028e31deffa3ddbabf16ad8ac80f2", size = 11842, upload-time = "2026-02-04T12:21:28.612Z" },
 ]
 
 [[package]]
@@ -106,17 +107,15 @@ dependencies = [
     { name = "django-cosmograph" },
     { name = "faker" },
     { name = "psycopg" },
-    { name = "psycopg2" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "apis-acdhch-default-settings", specifier = "==2.16.0" },
+    { name = "apis-acdhch-default-settings", specifier = "==2.17.0" },
     { name = "apis-core-rdf", specifier = "==0.59.0" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
     { name = "psycopg", specifier = ">=3.2.9" },
-    { name = "psycopg2", specifier = ">=2.9.10" },
 ]
 
 [[package]]
@@ -515,6 +514,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/1f/29/efbd4ac837c23bc48e34bbaf32bd429f0dc9ad7f80721cdb4622144c118c/grpcio-1.73.1-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:686231cdd03a8a8055f798b2b54b19428cdf18fa1549bee92249b43607c42668", size = 6287288, upload-time = "2025-06-26T01:52:57.33Z" },
     { url = "https://files.pythonhosted.org/packages/d8/61/c6045d2ce16624bbe18b5d169c1a5ce4d6c3a47bc9d0e5c4fa6a50ed1239/grpcio-1.73.1-cp313-cp313-win32.whl", hash = "sha256:89018866a096e2ce21e05eabed1567479713ebe57b1db7cbb0f1e3b896793ba4", size = 3668151, upload-time = "2025-06-26T01:52:59.405Z" },
     { url = "https://files.pythonhosted.org/packages/c2/d7/77ac689216daee10de318db5aa1b88d159432dc76a130948a56b3aa671a2/grpcio-1.73.1-cp313-cp313-win_amd64.whl", hash = "sha256:4a68f8c9966b94dff693670a5cf2b54888a48a5011c5d9ce2295a1a1465ee84f", size = 4335747, upload-time = "2025-06-26T01:53:01.233Z" },
+]
+
+[[package]]
+name = "gunicorn"
+version = "24.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/78/0a/10739c03537ec5b131a867bf94df2e412b437696c7e5d26970e2198a80d2/gunicorn-24.1.1.tar.gz", hash = "sha256:f006d110e5cb3102859b4f5cd48335dbd9cc28d0d27cd24ddbdafa6c60929408", size = 287567, upload-time = "2026-01-24T01:15:31.359Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/90/cfe637677916fc6f53cd2b05d5746e249f683e1fa14c9e745a88c66f7290/gunicorn-24.1.1-py3-none-any.whl", hash = "sha256:757f6b621fc4f7581a90600b2cd9df593461f06a41d7259cb9b94499dc4095a8", size = 114920, upload-time = "2026-01-24T01:15:29.656Z" },
 ]
 
 [[package]]
@@ -1133,15 +1144,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/27/4a/93a6ab570a8d1a4ad171a1f4256e205ce48d828781312c0bbaff36380ecb/psycopg-3.2.9.tar.gz", hash = "sha256:2fbb46fcd17bc81f993f28c47f1ebea38d66ae97cc2dbc3cad73b37cefbff700", size = 158122, upload-time = "2025-05-13T16:11:15.533Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/44/b0/a73c195a56eb6b92e937a5ca58521a5c3346fb233345adc80fd3e2f542e2/psycopg-3.2.9-py3-none-any.whl", hash = "sha256:01a8dadccdaac2123c916208c96e06631641c0566b22005493f09663c7a8d3b6", size = 202705, upload-time = "2025-05-13T16:06:26.584Z" },
-]
-
-[[package]]
-name = "psycopg2"
-version = "2.9.10"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/62/51/2007ea29e605957a17ac6357115d0c1a1b60c8c984951c19419b3474cdfd/psycopg2-2.9.10.tar.gz", hash = "sha256:12ec0b40b0273f95296233e8750441339298e6a572f7039da5b260e3c8b60e11", size = 385672, upload-time = "2024-10-16T11:24:54.832Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/49/a6cfc94a9c483b1fa401fbcb23aca7892f60c7269c5ffa2ac408364f80dc/psycopg2-2.9.10-cp313-cp313-win_amd64.whl", hash = "sha256:91fd603a2155da8d0cfcdbf8ab24a2d54bca72795b90d2a3ed2b6da8d979dee2", size = 2569060, upload-time = "2025-01-04T20:09:15.28Z" },
 ]
 
 [[package]]
