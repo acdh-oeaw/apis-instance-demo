@@ -153,7 +153,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=1024)),
             ],
-            bases=(apis_core.generic.abc.GenericModel, models.Model),
+            bases=(models.Model,),
         ),
         migrations.CreateModel(
             name="WorksFor",
@@ -283,7 +283,6 @@ class Migration(migrations.Migration):
             bases=(
                 simple_history.models.HistoricalChanges,
                 models.Model,
-                apis_core.generic.abc.GenericModel,
             ),
         ),
         migrations.CreateModel(
@@ -367,7 +366,6 @@ class Migration(migrations.Migration):
             bases=(
                 simple_history.models.HistoricalChanges,
                 models.Model,
-                apis_core.generic.abc.GenericModel,
             ),
         ),
         migrations.CreateModel(
@@ -493,7 +491,6 @@ class Migration(migrations.Migration):
             bases=(
                 simple_history.models.HistoricalChanges,
                 models.Model,
-                apis_core.generic.abc.GenericModel,
             ),
         ),
     ]
