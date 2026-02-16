@@ -14,6 +14,7 @@ dependencies = [
     "faker>=37.5.3",
     "django-cosmograph==0.3.11",
     "apis-bibsonomy>=0.13.2",
+    "apis-highlighter-ng>=0.6.4",
 ]
 
 [tool.hatch.build.targets.wheel]

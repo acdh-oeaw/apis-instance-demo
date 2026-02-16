@@ -115,6 +115,19 @@ wheels = [
 ]
 
 [[package]]
+name = "apis-highlighter-ng"
+version = "0.6.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "apis-core-rdf" },
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e8/13/ec1ef1cc8b3412434b20ef78f353120ce49752d194c21cb8069275ca3cd5/apis_highlighter_ng-0.6.4.tar.gz", hash = "sha256:7ec8f19aecb387e3734d6e20657685cf9076ae4d6a675c8409255e3544d11a23", size = 14293, upload-time = "2025-11-28T10:52:34.097Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/1a/b1e81077037a35cf8079b737a89c2a04b369299d562c0f5c9b00f3909191/apis_highlighter_ng-0.6.4-py3-none-any.whl", hash = "sha256:87ae7279326911e17a8b24e3f6919f3f47026e399ebaf9f5aad384dd220884a3", size = 15772, upload-time = "2025-11-28T10:52:32.759Z" },
+]
+
+[[package]]
 name = "apis-instance-demo"
 version = "0.1.0"
 source = { editable = "." }
@@ -122,6 +135,7 @@ dependencies = [
     { name = "apis-acdhch-default-settings" },
     { name = "apis-bibsonomy" },
     { name = "apis-core-rdf" },
+    { name = "apis-highlighter-ng" },
     { name = "django-cosmograph" },
     { name = "faker" },
     { name = "psycopg", extra = ["binary"] },
@@ -132,6 +146,7 @@ requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.17.0" },
     { name = "apis-bibsonomy", specifier = ">=0.13.2" },
     { name = "apis-core-rdf", specifier = "==0.59.0" },
+    { name = "apis-highlighter-ng", specifier = ">=0.6.4" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.2" },
