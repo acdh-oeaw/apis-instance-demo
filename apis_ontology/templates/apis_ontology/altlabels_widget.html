@@ -1,0 +1,101 @@
+
+<div class="altlabels-widget" data-name="{{ name }}">
+  <input type="hidden" name="{{ name }}" id="id_{{ name }}" value='{{ value|escapejs }}'>
+
+  <div class="altlabels-editor row g-2 align-items-center mb-2">
+    <div class="col-auto" style="flex-basis: 100px; min-width: 80px; max-width: 150px;">
+      <input class="altlabels-lang form-control form-control-sm" placeholder="Language" aria-label="language" style="width: 100%;">
+    </div>
+    <div class="col" style="min-width: 150px;">
+      <input class="altlabels-label form-control form-control-sm" placeholder="Label" aria-label="label" style="width: 100%;">
+    </div>
+    <div class="col-auto">
+      <button type="button" class="altlabels-add btn btn-primary btn-sm">+</button>
+    </div>
+  </div>
+
+  <div class="altlabels-list" aria-live="polite">
+    {# Items will be rendered by JS from the hidden value as editable rows #}
+  </div>
+</div>
+
+<script>
+(function(){
+  var container = document.querySelector('.altlabels-widget[data-name="{{ name }}"]');
+  if(!container) return;
+  var hidden = container.querySelector('input[type=hidden]');
+  var editorLang = container.querySelector('.altlabels-lang');
+  var editorLabel = container.querySelector('.altlabels-label');
+  var addBtn = container.querySelector('.altlabels-add');
+  var listDiv = container.querySelector('.altlabels-list');
+
+
+  function getItems(){
+    try {
+        var raw = hidden.value || '[]';
+        // Unescape \u0022 to ", if present
+        var val = JSON.parse(raw.replace(/\\u0022/g, '"'));
+      if (!Array.isArray(val)) return [];
+      return val;
+    } catch(e) { return []; }
+  }
+
+  function setItems(items){
+    hidden.value = JSON.stringify(items);
+  }
+
+  function render(){
+    listDiv.innerHTML = '';
+    var items = getItems();
+    items.forEach(function(it, idx){
+      var row = document.createElement('div');
+      row.className = 'altlabels-row row g-2 align-items-center mb-1';
+      row.innerHTML =
+        '<div class="col-auto" style="flex-basis: 100px; min-width: 80px; max-width: 150px;">'
+        + '<input class="altlabels-lang-edit form-control form-control-sm" placeholder="Language" value="'+(it.language||'')+'" style="width: 100%;">'
+        + '</div>'
+        + '<div class="col" style="min-width: 150px;">'
+        + '<input class="altlabels-label-edit form-control form-control-sm" placeholder="Label" value="'+(it.label||'')+'" style="width: 100%;">'
+        + '</div>'
+        + '<div class="col-auto">'
+        + '<button type="button" class="altlabels-remove btn btn-danger btn-sm">X</button>'
+        + '</div>';
+
+      // Update on input
+      row.querySelector('.altlabels-lang-edit').addEventListener('input', function(e){
+        items[idx].language = e.target.value;
+        setItems(items);
+      });
+      row.querySelector('.altlabels-label-edit').addEventListener('input', function(e){
+        items[idx].label = e.target.value;
+        setItems(items);
+      });
+      row.querySelector('.altlabels-remove').addEventListener('click', function(){
+        items.splice(idx,1);
+        setItems(items);
+        render();
+      });
+      listDiv.appendChild(row);
+    });
+  }
+
+
+  addBtn.addEventListener('click', function(){
+    var lang = editorLang.value.trim();
+    var label = editorLabel.value.trim();
+    if(!lang && !label) return;
+    var items = getItems();
+    if (!Array.isArray(items)) items = [];
+    items.push({language: lang, label: label});
+    setItems(items);
+    editorLang.value = '';
+    editorLabel.value = '';
+    render();
+  });
+
+  var form = hidden.closest('form');
+  if(form) form.addEventListener('submit', function(){ setItems(getItems()); });
+
+  render();
+})();
+</script>

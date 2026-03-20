@@ -1,0 +1,11 @@
+{% load generic %}
+<tr>
+  <th>{{ key.verbose_name }}</th>
+<td>
+  {{ value |json_script:"altlabels-data" }}
+  {% for item in value %}
+    {% if item.label or item.language %}
+      {{ item.label }}{% if item.language %} ({{ item.language }}){% endif %}{% if not forloop.last %}, {% endif %}
+    {% endif %}
+  {% endfor %}
+</td>
