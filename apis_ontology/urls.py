@@ -19,6 +19,7 @@ urlpatterns = [
         name="graph_view",
     ),
     path("", include("apis_acdhch_django_auditlog.urls")),
+    path("", include("django_grouper.urls")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
