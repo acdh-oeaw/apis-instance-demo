@@ -10,6 +10,8 @@ from apis_core.generic.abc import GenericModel
 from apis_core.history.models import VersionMixin
 from apis_core.relations.models import Relation
 
+from apis_ontology.fields import AlternativeLabelsField
+
 
 class Profession(GenericModel, models.Model):
     """A model representing a profession or occupation."""
@@ -27,6 +29,9 @@ class Person(VersionMixin, E21_Person, AbstractEntity):
     """A model representing a person with associated professions."""
 
     profession = models.ManyToManyField(Profession, blank=True)
+    alternative_names = AlternativeLabelsField(
+        blank=True, null=True, verbose_name="Alternative names"
+    )
 
     class Meta:
         ordering = ["surname"]
@@ -34,6 +39,10 @@ class Person(VersionMixin, E21_Person, AbstractEntity):
 
 class Place(VersionMixin, E53_Place, AbstractEntity):
     """A model representing a place or location."""
+
+    alternative_labels = AlternativeLabelsField(
+        blank=True, null=True, verbose_name="Alternative labels"
+    )
 
     class Meta:
         ordering = ["label"]
