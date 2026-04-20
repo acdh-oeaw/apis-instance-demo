@@ -15,6 +15,7 @@ dependencies = [
     "django-cosmograph==0.3.11",
     "apis-bibsonomy>=0.13.2",
     "apis-highlighter-ng>=0.6.4",
+    "django-grouper>=0.4.0",
 ]
 
 [tool.hatch.build.targets.wheel]
