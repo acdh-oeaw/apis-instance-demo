@@ -9,10 +9,11 @@ from apis_core.apis_entities.models import AbstractEntity
 from apis_core.generic.abc import GenericModel
 from apis_core.history.models import VersionMixin
 from apis_core.relations.models import Relation
-
+from apis_core.registry import registry
 from apis_ontology.fields import AlternativeLabelsField
 
 
+@registry.register
 class Profession(GenericModel, models.Model):
     """A model representing a profession or occupation."""
 
@@ -25,6 +26,7 @@ class Profession(GenericModel, models.Model):
         ordering = ["name"]
 
 
+@registry.register
 class Person(VersionMixin, E21_Person, AbstractEntity):
     """A model representing a person with associated professions."""
 
@@ -37,6 +39,7 @@ class Person(VersionMixin, E21_Person, AbstractEntity):
         ordering = ["surname"]
 
 
+@registry.register
 class Place(VersionMixin, E53_Place, AbstractEntity):
     """A model representing a place or location."""
 
@@ -48,6 +51,7 @@ class Place(VersionMixin, E53_Place, AbstractEntity):
         ordering = ["label"]
 
 
+@registry.register
 class Group(VersionMixin, E74_Group, AbstractEntity):
     """A model representing a group or organization or institution."""
 
@@ -55,6 +59,7 @@ class Group(VersionMixin, E74_Group, AbstractEntity):
         ordering = ["label"]
 
 
+@registry.register
 class IsRelatedTo(Relation):
     """A relation indicating a familial relationship between two persons."""
 
@@ -69,6 +74,7 @@ class IsRelatedTo(Relation):
         ordering = ["pk"]
 
 
+@registry.register
 class IsAMemberOf(Relation):
     """A relation indicating that a person is a member of a group."""
 
@@ -83,6 +89,7 @@ class IsAMemberOf(Relation):
         ordering = ["pk"]
 
 
+@registry.register
 class WorksFor(Relation):
     """A relation indicating that a person works for a group or organization."""
 
@@ -97,6 +104,7 @@ class WorksFor(Relation):
         ordering = ["pk"]
 
 
+@registry.register
 class LivesIn(Relation):
     """A relation indicating that a person lives in a place."""
 
