@@ -89,8 +89,8 @@ wheels = [
 
 [[package]]
 name = "apis-core-rdf"
-version = "0.62.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.63.1"
+source = { git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=refs%2Fpull%2F2283%2Fhead#1a8739fa58a893d721e771b451597de1f644e56a" }
 dependencies = [
     { name = "acdh-arche-assets" },
     { name = "crispy-bootstrap5" },
@@ -108,10 +108,6 @@ dependencies = [
     { name = "pydot" },
     { name = "rdflib" },
     { name = "tablib" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/14/0e/09b9389622a7b382b98d8c1df41d5c84461beb69892b2511a3761004b2cc/apis_core_rdf-0.62.0.tar.gz", hash = "sha256:c53d94f12fb144824d5655404a135d62672d1ea3424b28d40c8868b2838086f8", size = 315782, upload-time = "2026-03-30T14:29:50.385Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/a9/04/1bafbb6dbc0471d8a179b752067ac269f109cd35c966ab7c3437ec64a375/apis_core_rdf-0.62.0-py3-none-any.whl", hash = "sha256:31016e33c744891d545c85ed9bb703750bf630214c4cda587e1aabd3378e6eb3", size = 289552, upload-time = "2026-03-30T14:29:48.976Z" },
 ]
 
 [[package]]
@@ -145,7 +141,7 @@ dependencies = [
 requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.18.0" },
     { name = "apis-bibsonomy", specifier = ">=0.13.2" },
-    { name = "apis-core-rdf", specifier = "==0.62.0" },
+    { name = "apis-core-rdf", git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=refs%2Fpull%2F2283%2Fhead" },
     { name = "apis-highlighter-ng", specifier = ">=0.6.4" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
