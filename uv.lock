@@ -90,7 +90,11 @@ wheels = [
 [[package]]
 name = "apis-core-rdf"
 version = "0.63.1"
+<<<<<<< HEAD
 source = { git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=refs%2Fpull%2F2283%2Fhead#1a8739fa58a893d721e771b451597de1f644e56a" }
+=======
+source = { git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=birger%2Fsearch#1a8739fa58a893d721e771b451597de1f644e56a" }
+>>>>>>> c8c1ada (chore(deps): point apis-core to poc: search #2283)
 dependencies = [
     { name = "acdh-arche-assets" },
     { name = "crispy-bootstrap5" },
@@ -141,7 +145,7 @@ dependencies = [
 requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.18.0" },
     { name = "apis-bibsonomy", specifier = ">=0.13.2" },
-    { name = "apis-core-rdf", git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=refs%2Fpull%2F2283%2Fhead" },
+    { name = "apis-core-rdf", git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=birger%2Fsearch" },
     { name = "apis-highlighter-ng", specifier = ">=0.6.4" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
