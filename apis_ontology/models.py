@@ -9,11 +9,11 @@ from apis_core.apis_entities.models import AbstractEntity
 from apis_core.generic.abc import GenericModel
 from apis_core.history.models import VersionMixin
 from apis_core.relations.models import Relation
-from apis_core.search.registry import register as search_registry_register
+from apis_core.search.registry import search
 from apis_ontology.fields import AlternativeLabelsField
 
 
-@search_registry_register
+@search.register
 class Profession(GenericModel, models.Model):
     """A model representing a profession or occupation."""
 
@@ -26,7 +26,7 @@ class Profession(GenericModel, models.Model):
         ordering = ["name"]
 
 
-@search_registry_register
+@search.register
 class Person(VersionMixin, E21_Person, AbstractEntity):
     """A model representing a person with associated professions."""
 
@@ -39,7 +39,7 @@ class Person(VersionMixin, E21_Person, AbstractEntity):
         ordering = ["surname"]
 
 
-@search_registry_register
+@search.register
 class Place(VersionMixin, E53_Place, AbstractEntity):
     """A model representing a place or location."""
 
@@ -51,7 +51,7 @@ class Place(VersionMixin, E53_Place, AbstractEntity):
         ordering = ["label"]
 
 
-@search_registry_register
+@search.register
 class Group(VersionMixin, E74_Group, AbstractEntity):
     """A model representing a group or organization or institution."""
 
@@ -59,7 +59,7 @@ class Group(VersionMixin, E74_Group, AbstractEntity):
         ordering = ["label"]
 
 
-@search_registry_register
+@search.register
 class IsRelatedTo(Relation):
     """A relation indicating a familial relationship between two persons."""
 
@@ -74,7 +74,7 @@ class IsRelatedTo(Relation):
         ordering = ["pk"]
 
 
-@search_registry_register
+@search.register
 class IsAMemberOf(Relation):
     """A relation indicating that a person is a member of a group."""
 
@@ -89,7 +89,7 @@ class IsAMemberOf(Relation):
         ordering = ["pk"]
 
 
-@search_registry_register
+@search.register
 class WorksFor(Relation):
     """A relation indicating that a person works for a group or organization."""
 
@@ -104,7 +104,7 @@ class WorksFor(Relation):
         ordering = ["pk"]
 
 
-@search_registry_register
+@search.register
 class LivesIn(Relation):
     """A relation indicating that a person lives in a place."""
 
