@@ -24,7 +24,8 @@ Demo APIS Instance
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="{% url 'apis:documentation' %}">{% translate "Data model" %}</a>
-    </div>
+        <a class="dropdown-item" href="{% url 'apis:search' %}">{% translate "Search" %}</a>
+        </div>
     </li>
     {{ block.super }}
     <li class="nav-item">
