@@ -32,3 +32,5 @@ APIS_BIBSONOMY = [
         "group": "297412",
     }
 ]
+
+DATABASES["default"]["DISABLE_SERVER_SIDE_CURSORS"] = True
