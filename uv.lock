@@ -89,8 +89,8 @@ wheels = [
 
 [[package]]
 name = "apis-core-rdf"
-version = "0.63.1"
-source = { git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=birger%2Fsearch#93bf5237277d79306e91fe16548e468a71151987" }
+version = "0.64.5"
+source = { git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=birger%2Fsearch#f2653540b6c3ccd5b7337f49da7ec5687fa8265c" }
 dependencies = [
     { name = "acdh-arche-assets" },
     { name = "crispy-bootstrap5" },
