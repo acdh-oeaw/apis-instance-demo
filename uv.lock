@@ -113,6 +113,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "apis-data-explorer"
+version = "0.0.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "apis-acdhch-default-settings" },
+    { name = "apis-core-rdf" },
+    { name = "apis-data-projection" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f0/ac/3042d9f78281d35dab2caf80b7887796725305b365bab5ceebbbb65c0961/apis_data_explorer-0.0.8.tar.gz", hash = "sha256:ee1677fbab7e607feb0429cda1da44eae6e6137d23a5d8968e12d76af1128694", size = 67165, upload-time = "2026-06-23T07:18:47.016Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9e/fc/2c211c369ab58d0a9719c143c4b631dadfb8dd27f7c5a2ff6efb7efcd14e/apis_data_explorer-0.0.8-py3-none-any.whl", hash = "sha256:4c282181a5d1639f5f28a547c32bdfeac441fae1eabe1d51b560d7af201b765c", size = 20993, upload-time = "2026-06-23T07:18:45.981Z" },
+]
+
+[[package]]
+name = "apis-data-projection"
+version = "0.1.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "apis-acdhch-default-settings" },
+    { name = "apis-core-rdf" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d0/53/6fbcd10837bacc65826c5ab11459078b627034e8fc9180b87813c18583f7/apis_data_projection-0.1.4.tar.gz", hash = "sha256:627177dca458d65e877baa225fa9015614596720d39bb4829daf0d1cf63ade68", size = 56199, upload-time = "2026-06-22T15:11:41.602Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/4a/8c8729662483fe5dd3b1555ac4b3774b894cbbdcd4d98a8a1db2b45a02b2/apis_data_projection-0.1.4-py3-none-any.whl", hash = "sha256:d10eb9ddda401a8baa406b47633917a0bc66bd6b923c91b3a522ed90bed55045", size = 14354, upload-time = "2026-06-22T15:11:40.256Z" },
+]
+
+[[package]]
 name = "apis-highlighter-ng"
 version = "0.6.4"
 source = { registry = "https://pypi.org/simple" }
@@ -133,6 +161,7 @@ dependencies = [
     { name = "apis-acdhch-default-settings" },
     { name = "apis-bibsonomy" },
     { name = "apis-core-rdf" },
+    { name = "apis-data-explorer" },
     { name = "apis-highlighter-ng" },
     { name = "django-cosmograph" },
     { name = "faker" },
@@ -144,6 +173,7 @@ requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.20.0" },
     { name = "apis-bibsonomy", specifier = ">=0.13.2" },
     { name = "apis-core-rdf", git = "https://github.com/acdh-oeaw/apis-core-rdf.git?rev=birger%2Fsearch" },
+    { name = "apis-data-explorer", specifier = ">=0.0.8" },
     { name = "apis-highlighter-ng", specifier = ">=0.6.4" },
     { name = "django-cosmograph", specifier = "==0.3.11" },
     { name = "faker", specifier = ">=37.5.3" },
@@ -197,6 +227,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/44/96/392abd49b094d30b91d9fbda6a69519e95802250b777841cf3bda8fe136c/charset_normalizer-3.4.2-cp313-cp313-win32.whl", hash = "sha256:aaeeb6a479c7667fbe1099af9617c83aaca22182d6cf8c53966491a0f1b7ffb7", size = 98064, upload-time = "2025-05-02T08:33:17.06Z" },
     { url = "https://files.pythonhosted.org/packages/e9/b0/0200da600134e001d91851ddc797809e2fe0ea72de90e09bec5a2fbdaccb/charset_normalizer-3.4.2-cp313-cp313-win_amd64.whl", hash = "sha256:aa6af9e7d59f9c12b33ae4e9450619cf2488e2bbe9b44030905877f0b2324980", size = 105641, upload-time = "2025-05-02T08:33:18.753Z" },
     { url = "https://files.pythonhosted.org/packages/20/94/c5790835a017658cbfabd07f3bfb549140c3ac458cfc196323996b10095a/charset_normalizer-3.4.2-py3-none-any.whl", hash = "sha256:7f56930ab0abd1c45cd15be65cc741c28b1c9a34876ce8c17a2fa107810c0af0", size = 52626, upload-time = "2025-05-02T08:34:40.053Z" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
 ]
 
 [[package]]
@@ -1477,6 +1516,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/09/cc/fe19d9c2ac1088794a51fc72f49b7226f88a0361f924fb3d17a9ec80e657/tablib-3.8.0.tar.gz", hash = "sha256:94d8bcdc65a715a0024a6d5b701a5f31e45bd159269e62c73731de79f048db2b", size = 122247, upload-time = "2025-01-22T15:29:27.276Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/95/6542f54ebd90539b12ed6189cb54a6550a28407b1c503c2e55190c29a4c9/tablib-3.8.0-py3-none-any.whl", hash = "sha256:35bdb9d4ec7052232f8803908f9c7a9c3c65807188b70618fa7a7d8ccd560b4d", size = 47935, upload-time = "2025-01-22T15:28:44.499Z" },
+]
+
+[[package]]
+name = "tqdm"
+version = "4.68.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/87/d7/0535a28b1f5f24f6612fb3ff1e89fb1a8d160fee0f976e0aa6803862134b/tqdm-4.68.3.tar.gz", hash = "sha256:00dfa48452b6b6cfae3dd9885636c23d3422d1ec97c66d96818cbd5e0821d482", size = 170596, upload-time = "2026-06-17T07:36:52.105Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d8/8e/bb97bb0c71802080bfc8952937d174e49cfc50de5c951dd47b2496f0dcdb/tqdm-4.68.3-py3-none-any.whl", hash = "sha256:39832cc2def2789a6f29df83f172db7416cea70052c0907a57801c5f2fdccb03", size = 78337, upload-time = "2026-06-17T07:36:50.132Z" },
 ]
 
 [[package]]
