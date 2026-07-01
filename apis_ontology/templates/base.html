@@ -22,11 +22,23 @@ Demo APIS Instance
         aria-expanded="false">
         {% translate "About" %} <span class="caret" />
     </a>
+    
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="{% url 'apis:documentation' %}">{% translate "Data model" %}</a>
         <a class="dropdown-item" href="{% url 'apis:search:search' %}">{% translate "Search" %}</a>
         </div>
-    </li>
+
+        </li>
+        <li class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true"
+        aria-expanded="false">
+        {% translate "Search" %} <span class="caret" />
+    </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{% url 'apis:search:search' %}">{% translate "Search" %}</a>
+        <a class="dropdown-item" href="{% url 'explore' %}">{% translate "Explore" %}</a>
+        </div>
+        </li>
     {{ block.super }}
     <li class="nav-item">
         <a class="nav-link" href="{% url 'graph_view' %}">{% translate "Graph" %}</a>
