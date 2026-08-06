@@ -4,7 +4,8 @@ Data model for this demo APIS instance
 
 from django.db import models
 
-from apis_core.apis_entities.abc import E21_Person, E53_Place, E74_Group
+from apis_core.entities.abc import Entity
+from apis_core.entities.abc import E21_Person, E53_Place, E74_Group
 from apis_core.apis_entities.models import AbstractEntity
 from apis_core.generic.abc import GenericModel
 from apis_core.history.models import VersionMixin
@@ -27,7 +28,7 @@ class Profession(GenericModel, models.Model):
 
 
 @search.register
-class Person(VersionMixin, E21_Person, AbstractEntity):
+class Person(VersionMixin, E21_Person, AbstractEntity, Entity):
     """A model representing a person with associated professions."""
 
     profession = models.ManyToManyField(Profession, blank=True)
@@ -40,7 +41,7 @@ class Person(VersionMixin, E21_Person, AbstractEntity):
 
 
 @search.register
-class Place(VersionMixin, E53_Place, AbstractEntity):
+class Place(VersionMixin, E53_Place, AbstractEntity, Entity):
     """A model representing a place or location."""
 
     alternative_labels = AlternativeLabelsField(
@@ -52,7 +53,7 @@ class Place(VersionMixin, E53_Place, AbstractEntity):
 
 
 @search.register
-class Group(VersionMixin, E74_Group, AbstractEntity):
+class Group(VersionMixin, E74_Group, AbstractEntity, Entity):
     """A model representing a group or organization or institution."""
 
     class Meta:
