@@ -89,6 +89,18 @@ wheels = [
 ]
 
 [[package]]
+name = "apis-advanced-search"
+version = "0.0.15"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "apis-core-rdf" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f8/fd/3ba62a2099bd4c0f9ff49b2e4a6a364e3dea6db312a62f053a79ac156d8a/apis_advanced_search-0.0.15.tar.gz", hash = "sha256:59f000d8e16c08c1b0a2df2fa86cbb6531473fcdd75bb11db007d578ef94d8a7", size = 1037924, upload-time = "2026-11-20T08:11:42.389Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3a/44/a0f9a3bb1ba021bae4f9c67418f602c56e3b6c7fcadababe0843fe8942cf/apis_advanced_search-0.0.15-py3-none-any.whl", hash = "sha256:81047e26bd53ceca0b037d9ae808f44637d9b931ac1d64ada0ab0cbeda08c1aa", size = 70237, upload-time = "2026-11-20T08:11:40.992Z" },
+]
+
+[[package]]
 name = "apis-bibsonomy"
 version = "0.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -153,6 +165,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "apis-acdhch-default-settings" },
+    { name = "apis-advanced-search" },
     { name = "apis-bibsonomy" },
     { name = "apis-core-rdf" },
     { name = "apis-highlighter-ng" },
@@ -164,6 +177,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "apis-acdhch-default-settings", specifier = "==2.24.2" },
+    { name = "apis-advanced-search", specifier = ">=0.0.15" },
     { name = "apis-bibsonomy", specifier = ">=0.13.2" },
     { name = "apis-core-rdf", specifier = "==0.74.2" },
     { name = "apis-highlighter-ng", specifier = ">=0.6.4" },

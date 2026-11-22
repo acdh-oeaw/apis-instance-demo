@@ -22,3 +22,10 @@ urlpatterns = [
 ]
 
 urlpatterns += staticfiles_urlpatterns()
+
+urlpatterns += [
+    path(
+        "advanced-search/",
+        include("apis_advanced_search.urls"),
+    ),
+]
