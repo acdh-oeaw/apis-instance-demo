@@ -11,9 +11,6 @@ ADDITIONAL_APPS = [
     "apis_core.documentation",
     "django.contrib.staticfiles",
     "django_cosmograph",
-    "apis_core.search",
-    "apis_data_projection",
-    "apis_data_explorer",
 ]
 CSP_DEFAULT_SRC = CSP_DEFAULT_SRC + (
     "'unsafe-eval'",  # needed for cosmograph 1.4.2
